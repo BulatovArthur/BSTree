@@ -47,7 +47,7 @@ int Menu(Tree *&tree)
                                 cout << "Are you sure?" << endl;
                                 cin >> ex;
                                 if ((ex == "y") || (ex =="yes"))
-                                        cout << "Good luck!";
+                                        cout << "Good luck!" << endl;
                                 return 0;
                         default:
                                 cerr << "Error" << endl;
