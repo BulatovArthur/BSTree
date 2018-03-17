@@ -45,6 +45,26 @@ void Tree::Insert(int m_data) {
         Add(m_data, root);
 }
 
+void Tree::Print_Tree(Node *m_root, int space) {
+        if (m_root == nullptr)
+                return;
+        int count = 1;
+        space += count;
+        Print_Tree(m_root->right, space);
+        cout << endl;
+        for (int i = count; i < space; i++)
+                cout << "   ";
+        cout << "--" << m_root->data << endl;
+        Print_Tree(m_root->left, space);
+}
+
+void Tree::Print() {
+        if (root != nullptr)
+                Print_Tree(root, 0);
+        else
+                cout << "The tree is empty" << endl;
+}
+
 Tree::~Tree() {
         Clear(root);
 }
