@@ -4,7 +4,7 @@
 using namespace std;
 using namespace BSTree;
 
-int Menu(Tree *&tree)
+void Menu(Tree *&tree)
 {
         cout << "Operation:" << endl;
         cout << "1. The tree" << endl;
@@ -23,7 +23,10 @@ int Menu(Tree *&tree)
                 switch(oper)
                 {
                         case 1:
-                                tree->Print();
+                                if (tree->Check())
+                                        tree->Print();
+                                else
+                                        cout << "Tree is empty" << endl;
                                 break;
                         case 2:
 
@@ -48,7 +51,7 @@ int Menu(Tree *&tree)
                                 cin >> ex;
                                 if ((ex == "y") || (ex =="yes"))
                                         cout << "Good luck!" << endl;
-                                return 0;
+                                break;
                         default:
                                 cerr << "Error" << endl;
                   }
