@@ -4,8 +4,7 @@
 using namespace std;
 using namespace BSTree;
 
-void Menu(Tree *&tree)
-{
+void Menu(Tree *&tree) {
         cout << "Operation:" << endl;
         cout << "1. The tree" << endl;
         cout << "2. Nodes of a tree" << endl;
@@ -17,11 +16,9 @@ void Menu(Tree *&tree)
         cout << "8. Finish" << endl;
         int oper;
         string ex;
-        while ((ex != "y") && (ex != "yes"))
-        {
+        while ((ex != "y") && (ex != "yes")) {
                 cin >> oper;
-                switch(oper)
-                {
+                switch(oper) {
                         case 1:
                                 if (tree->Check())
                                         tree->Print();
@@ -29,22 +26,16 @@ void Menu(Tree *&tree)
                                         cout << "Tree is empty" << endl;
                                 break;
                         case 2:
-
                                 break;
                         case 3:
-
                                 break;
                         case 4:
-
                                 break;
                         case 5:
-
                                 break;
                         case 6:
-
                                 break;
                         case 7:
-
                                 break;
                         case 8:
                                 cout << "Are you sure?" << endl;
