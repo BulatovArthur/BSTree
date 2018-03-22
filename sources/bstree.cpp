@@ -57,7 +57,7 @@ void Tree::Print(Node *m_root, int space) {
 }
 
 void Tree::Print() {
-        Print_Tree(root, 0);
+        Print(root, 0);
 }
 
 Tree::~Tree() {
