@@ -12,6 +12,7 @@ namespace BSTree {
                 Node *root;
         public:
                 Tree();
+                bool Check();
                 void Add(int m_data, Node *&m_root);
                 void Clear(Node *&m_root);
                 void Print_Tree(Node *m_root, int space);
