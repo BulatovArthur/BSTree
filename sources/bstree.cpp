@@ -60,6 +60,42 @@ void Tree::Print() {
         Print(root, 0);
 }
 
+void Tree::Transversal(Node *m_root) {
+        if (m_root->left != nullptr)
+                Transversal(m_root->left);
+        cout << m_root->data << " ";
+        if (m_root->right != nullptr)
+                Transversal(m_root->right);
+}
+
+void Tree::Transversal() {
+        Transversal(root);
+}
+
+void Tree::Straight(Node *m_root) {
+        cout << m_root->data << " ";
+        if (m_root->left != nullptr)
+                Straight(m_root->left);
+        if (m_root->right != nullptr)
+                Straight(m_root->right);
+}
+
+void Tree::Straight() {
+        Straight(root);
+}
+
+void Tree::Reverse(Node *m_root) {
+        if (m_root->left != nullptr)
+                Reverse(m_root->left);
+        if (m_root->right != nullptr)
+                Reverse(m_root->right);
+        cout << m_root->data << " ";
+}
+
+void Tree::Reverse() {
+        Reverse(root);
+}
+
 Tree::~Tree() {
         Clear(root);
 }
