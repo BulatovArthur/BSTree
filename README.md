@@ -18,14 +18,13 @@
 
 # Инструкция по сборке и запуск программы
 
-$ git clone https://github.com/BulatovArthur/BSTree
-***
-`Cloning into 'BSTree'...
-remote: Counting objects: 96, done.
-remote: Compressing objects: 100% (75/75), done.
-remote: Total 96 (delta 40), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (96/96), done.
-Checking connectivity... done.`
+    dir / $ git clone https://github.com/BulatovArthur/BSTree
+    dir /fonts `Cloning into 'BSTree'...
+    dir /fonts remote: Counting objects: 96, done.
+    dir /fonts remote: Compressing objects: 100% (75/75), done.
+    dir /fonts remote: Total 96 (delta 40), reused 0 (delta 0), pack-reused 0
+    dir /fonts Unpacking objects: 100% (96/96), done.
+    dir /fonts Checking connectivity... done.`
 ***
 $ cd BSTree
 ***
