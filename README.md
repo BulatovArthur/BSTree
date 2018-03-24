@@ -18,7 +18,7 @@
 
 # Инструкция по сборке и запуск программы
 
-1. git clone https://github.com/BulatovArthur/BSTree
+$ git clone https://github.com/BulatovArthur/BSTree
 ***
 `Cloning into 'BSTree'...
 remote: Counting objects: 96, done.
@@ -27,11 +27,11 @@ remote: Total 96 (delta 40), reused 0 (delta 0), pack-reused 0
 Unpacking objects: 100% (96/96), done.
 Checking connectivity... done.`
 ***
-2. cd BSTree
+$ cd BSTree
 ***
-3. g++ sources/bstree.cpp examples/example3.cpp -Iinclude -std=c++11 -o bstree 
+$ g++ sources/bstree.cpp examples/example3.cpp -Iinclude -std=c++11 -o bstree 
 ***
-4. ./bstree 6 8 7 9 4 1
+$ ./bstree 6 8 7 9 4 1
 Operation:
 1. The tree
 2. Nodes of a tree
