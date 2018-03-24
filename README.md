@@ -23,8 +23,8 @@
 remote: Counting objects: 96, done.
 remote: Compressing objects: 100% (75/75), done.
 remote: Total 96 (delta 40), reused 0 (delta 0), pack-reused 0
-Unpacking objects: 100% (96/96), done.'
-Checking connectivity... done.
+Unpacking objects: 100% (96/96), done.
+Checking connectivity... done.'
 2) cd BSTree
 3) g++ sources/bstree.cpp examples/example3.cpp -Iinclude -std=c++11 -o bstree 
 4) ./bstree 6 8 7 9 4 1
