@@ -17,18 +17,18 @@ bool Tree::Check() const {
 
 void Tree::Add(int m_data, Node *&m_root) {
         if (nullptr == m_root)
-                m_root = new Node{m_data, nullptr, nullptr};
+                m_root = new Node{m_data};
         if (m_data < m_root->data) {
                 if (m_root->left != nullptr)
                         Add(m_data, m_root->left);
                 else 
-                        m_root->left = new Node{m_data, nullptr, nullptr};
+                        m_root->left = new Node{m_data};
         }
         if (m_data > m_root->data) {
                 if (m_root->right != nullptr)
                         Add(m_data, m_root->right);
                 else
-                        m_root->right = new Node{m_data, nullptr, nullptr};
+                        m_root->right = new Node{m_data};
         }
 }
 
