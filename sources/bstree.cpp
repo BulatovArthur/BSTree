@@ -4,9 +4,11 @@
 using namespace std;
 using namespace BSTree;
 
-Tree::Tree() : root(nullptr) {};
+Node::Node(int val) : data(val), left(nullptr), right(nullptr) {}
 
-bool Tree::Check() {
+Tree::Tree() : root(nullptr) {}
+
+bool Tree::Check() const {
         if (root == nullptr)
                 return false;
         else
@@ -43,7 +45,7 @@ void Tree::Insert(int m_data) {
         Add(m_data, root);
 }
 
-void Tree::Print(Node *m_root, int space) {
+void Tree::Print(Node *m_root, int space) const {
         if (m_root == nullptr)
                 return;
         int count = 1;
@@ -56,11 +58,11 @@ void Tree::Print(Node *m_root, int space) {
         Print(m_root->left, space);
 }
 
-void Tree::Print() {
+void Tree::Print() const {
         Print(root, 0);
 }
 
-void Tree::Transversal(Node *m_root) {
+void Tree::Transversal(Node *m_root) const {
         if (m_root->left != nullptr)
                 Transversal(m_root->left);
         cout << m_root->data << " ";
@@ -68,11 +70,11 @@ void Tree::Transversal(Node *m_root) {
                 Transversal(m_root->right);
 }
 
-void Tree::Transversal() {
+void Tree::Transversal() const {
         Transversal(root);
 }
 
-void Tree::Straight(Node *m_root) {
+void Tree::Straight(Node *m_root) const {
         cout << m_root->data << " ";
         if (m_root->left != nullptr)
                 Straight(m_root->left);
@@ -80,11 +82,11 @@ void Tree::Straight(Node *m_root) {
                 Straight(m_root->right);
 }
 
-void Tree::Straight() {
+void Tree::Straight() const {
         Straight(root);
 }
 
-void Tree::Reverse(Node *m_root) {
+void Tree::Reverse(Node *m_root) const {
         if (m_root->left != nullptr)
                 Reverse(m_root->left);
         if (m_root->right != nullptr)
@@ -92,7 +94,7 @@ void Tree::Reverse(Node *m_root) {
         cout << m_root->data << " ";
 }
 
-void Tree::Reverse() {
+void Tree::Reverse() const {
         Reverse(root);
 }
 
