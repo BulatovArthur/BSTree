@@ -18,28 +18,25 @@
 
 # Инструкция по сборке и запуск программы
 
-    dir / $ git clone https://github.com/BulatovArthur/BSTree
-    dir /fonts `Cloning into 'BSTree'...
-    dir /fonts remote: Counting objects: 96, done.
-    dir /fonts remote: Compressing objects: 100% (75/75), done.
-    dir /fonts remote: Total 96 (delta 40), reused 0 (delta 0), pack-reused 0
-    dir /fonts Unpacking objects: 100% (96/96), done.
-    dir /fonts Checking connectivity... done.`
-***
-$ cd BSTree
-***
-$ g++ sources/bstree.cpp examples/example3.cpp -Iinclude -std=c++11 -o bstree 
-***
-$ ./bstree 6 8 7 9 4 1
-Operation:
-1. The tree
-2. Nodes of a tree
-3. Add the node
-4. Delete the node
-5. Save the tree
-6. Load the tree
-7. Check the node
-8. Finish
+    $ git clone https://github.com/BulatovArthur/BSTree
+    `Cloning into 'BSTree'...
+    remote: Counting objects: 96, done.
+    remote: Compressing objects: 100% (75/75), done.
+    remote: Total 96 (delta 40), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (96/96), done.
+    Checking connectivity... done.`
+    $ cd BSTree
+    $ g++ sources/bstree.cpp examples/example3.cpp -Iinclude -std=c++11 -o bstree 
+    $ ./bstree 6 8 7 9 4 1
+    Operation:
+    1. The tree
+    2. Nodes of a tree
+    3. Add the node
+    4. Delete the node
+    5. Save the tree
+    6. Load the tree
+    7. Check the node
+    8. Finish
 
 
 
