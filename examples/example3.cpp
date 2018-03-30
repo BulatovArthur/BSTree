@@ -5,18 +5,18 @@ using namespace std;
 using namespace BSTree;
 
 void Menu(Tree*& tree) {
-    cout << "Operation:" << endl;
-    cout << "1. The tree" << endl;
-    cout << "2. Nodes of a tree" << endl;
-    cout << "3. Add the node" << endl;
-    cout << "4. Delete the node" << endl;
-    cout << "5. Save the tree" << endl;
-    cout << "6. Load the tree" << endl;
-    cout << "7. Check the node" << endl;
-    cout << "8. Finish" << endl;
-    int oper;
     string ex;
     while ((ex != "y") && (ex != "yes")) {
+        cout << "Operation:" << endl;
+        cout << "1. The tree" << endl;
+        cout << "2. Nodes of a tree" << endl;
+        cout << "3. Add the node" << endl;
+        cout << "4. Delete the node" << endl;
+        cout << "5. Save the tree" << endl;
+        cout << "6. Load the tree" << endl;
+        cout << "7. Check the node" << endl;
+        cout << "8. Finish" << endl;
+        int oper;
         cin >> oper;
         switch (oper) {
         case 1:
