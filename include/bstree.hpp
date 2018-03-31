@@ -17,17 +17,22 @@ namespace BSTree {
                 void Transversal(Node *m_root) const;
                 void Straight(Node *m_root) const;
                 void Reverse(Node *m_root) const;
+                bool Compare(int m_item, Node *&m_root) const;
+                void Deleting(int m_item, Node *&m_root);
         public:
                 Tree();
                 bool Check() const;
                 void Print() const;
-                void Insert(int m_data);
+                void Add(int m_data);
                 void Transversal() const;
                 void Straight() const;
                 void Reverse() const;
+                bool Compare(int m_item);
+                void Deleting(int m_item);
                 ~Tree();
         };
 }
+
 
 
 
