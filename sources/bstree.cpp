@@ -98,6 +98,62 @@ void Tree::Reverse() const {
         Reverse(root);
 }
 
+bool Tree::Compare(int m_item, Node *&m_root) const {
+        if (m_root == nullptr)
+                return false;
+        if (m_item == m_root->data)
+                return true;
+        if (m_item < m_root->data) {
+                if (m_root->left != nullptr)
+                        return Compare(m_item, m_root->left);
+                else
+                        return false;
+        } else {
+                if (m_root->right != nullptr)
+                        return Compare(m_item, m_root->right);
+                else
+                        return false;
+        }
+}
+
+bool Tree::Compare(int m_item) {
+        Compare (m_item, root);
+}
+
+void Tree::Deleting(int m_item, Node *&m_root) {
+        if (m_item == m_root->data) {
+                Node *tmp;
+                if (m_root->right == nullptr)
+                        tmp = m_root->left;
+                else {
+                        Node *ptr = m_root->right;
+                        if (ptr->left == nullptr) {
+                                ptr->left = m_root->left;
+                                tmp = ptr;
+                        } else {
+                                Node *pmin = ptr->left;
+                                while (pmin->left != nullptr) {
+                                        ptr  = pmin;
+                                        pmin = ptr->left;
+                                }
+                                ptr->left = pmin->right;
+                                pmin->left = m_root->left;
+                                pmin->right = m_root->right;
+                                tmp = pmin;
+                        }
+                }
+        delete m_root;
+        m_root = tmp;
+        } else if (m_item < m_root->data)
+                        Deleting(m_item, m_root->left);
+                else
+                        Deleting(m_item, m_root->right);
+}
+
+void Tree::Deleting(int m_item) {
+        Deleting(m_item, root);
+}
+
 Tree::~Tree() {
         Clear(root);
 }
