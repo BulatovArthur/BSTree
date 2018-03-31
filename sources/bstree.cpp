@@ -41,7 +41,7 @@ void Tree::Clear(Node *&m_root) {
         }
 }
 
-void Tree::Insert(int m_data) {
+void Tree::Add(int m_data) {
         Add(m_data, root);
 }
 
