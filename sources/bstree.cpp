@@ -1,5 +1,6 @@
 #include <iostream>
 #include "bstree.hpp"
+#include <fstream>
 
 using namespace std;
 using namespace BSTree;
@@ -152,6 +153,28 @@ void Tree::Deleting(int m_item, Node *&m_root) {
 
 void Tree::Deleting(int m_item) {
         Deleting(m_item, root);
+}
+
+void Tree::Saving(Node *m_root, int space, string m_address) const {
+        ofstream fout(m_address, ios::app);
+        if (m_root == nullptr)
+                return;
+        int count = 1;
+        space += count;
+        Saving(m_root->right, space, m_address);
+        fout << endl;
+        for (int i = count; i < space; i++)
+                fout << "   ";
+        fout << "--" << m_root->data << endl;
+        Saving(m_root->left, space, m_address);
+        fout.close();
+}
+
+void Tree::Saving() const {
+        string address;
+        cout << "Enter the path to the file: ";
+        cin >> address;
+        Saving(root, 0, address);
 }
 
 Tree::~Tree() {
