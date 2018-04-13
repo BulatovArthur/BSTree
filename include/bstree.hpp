@@ -19,6 +19,7 @@ namespace BSTree {
                 void Reverse(Node *m_root) const;
                 bool Compare(int m_item, Node *&m_root) const;
                 void Deleting(int m_item, Node *&m_root);
+                void Saving(Node *m_root, int space, string m_address) const;
         public:
                 Tree();
                 bool Check() const;
@@ -29,9 +30,14 @@ namespace BSTree {
                 void Reverse() const;
                 bool Compare(int m_item);
                 void Deleting(int m_item);
+                void Saving() const;
                 ~Tree();
         };
 }
+
+
+
+
 
 
 
