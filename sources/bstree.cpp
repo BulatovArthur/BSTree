@@ -174,7 +174,30 @@ void Tree::Saving() const {
         string address;
         cout << "Enter the path to the file: ";
         cin >> address;
-        Saving(root, 0, address);
+        ifstream file;
+        file.open(address);
+        if (!file.is_open())
+                cout << "This file does not exist" << endl;
+        else {
+                file.seekg(0, ios::end);
+                if (file.tellg() == 0) {
+                        file.close();
+                        Saving(root, 0, address);
+                }
+                else {
+                        cout << "File already exists, overwrite?:" << endl;
+                        string exit;
+                        cin >> exit;
+                        if ((exit == "y") || (exit == "yes")) {
+                                file.close();
+                                ofstream file(address, ios_base::out | ios_base::trunc);
+                                file.close();
+                                Saving(root, 0, address);
+                        }
+                        else
+                                return;
+                }
+        }
 }
 
 Tree::~Tree() {
