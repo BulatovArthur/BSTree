@@ -200,6 +200,38 @@ void Tree::Saving() const {
         }
 }
 
+void Tree::Loading(string address) {
+        ifstream fin(address);
+        string stree;
+        getline (fin, stree);
+        int count = 0;
+        for (int i=0; i< stree.length(); i++) {
+                if (stree[i] == ' ')
+                        count++;
+        }
+        fin.close();
+        fin.open(address);
+        for (int i = 0; i <= count; i++) {
+                fin >> stree;
+                Add(atoi(stree.data()));
+        }
+        fin.close();
+}
+
+void Tree::Loading() {
+        string address;
+        cout << "Enter the path to the file: ";
+        cin >> address;
+        ifstream file;
+        file.open(address);
+        if (!file.is_open())
+                cerr << "This file does not exist" << endl;
+        else {
+                file.close();
+                Loading(address);
+        }
+}
+
 Tree::~Tree() {
         Clear(root);
 }
