@@ -77,8 +77,20 @@ void Menu(Tree *tree) {
                                         cout << "Tree is empty" << endl;
                                 break;
                         case 6:
+                                tree->Loading();
                                 break;
                         case 7:
+                                if (tree->Check()) {
+                                        cout << "Enter a value for search: ";
+                                        int val;
+                                        cin >> val;
+                                        if (tree->Compare(val))
+                                                cout << "Node is found" << endl;
+                                        else
+                                                cout << "Node is not found" << endl;
+                                } else
+                                        cout << "Tree is empty" << endl;
+
                                 break;
                         case 8:
                                 cout << "Are you sure?" << endl;
