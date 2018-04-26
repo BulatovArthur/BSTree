@@ -31,6 +31,8 @@ namespace BSTree {
                 bool Compare(int m_item);
                 void Deleting(int m_item);
                 void Saving() const;
+                void Loading(string m_address);
+                void Loading();
                 ~Tree();
         };
 }
